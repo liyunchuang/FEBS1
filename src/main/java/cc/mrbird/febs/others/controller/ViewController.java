@@ -103,4 +103,10 @@ public class ViewController {
     public String dataPermissionTest() {
         return FebsUtil.view("others/datapermission/test");
     }
+
+    @GetMapping("test")
+    @RequiresPermissions("others:test")
+    public String test() {
+        return FebsUtil.view("others/test/test");
+    }
 }
